@@ -37,7 +37,7 @@ public class AccountService {
             preparedStatement.setString(1, account.getAccountNumber());
             preparedStatement.setDouble(2, account.getBalance());
             preparedStatement.setString(3, account.getUsername());
-            preparedStatement.setTimestamp(5, Timestamp.valueOf(account.getCreated()));
+            preparedStatement.setTimestamp(4, Timestamp.valueOf(account.getCreated()));
             preparedStatement.executeUpdate();
             logger.info("Account created successfully: " + account.getAccountNumber());
         } catch (SQLException e) {

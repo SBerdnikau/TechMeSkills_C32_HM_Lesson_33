@@ -47,7 +47,7 @@ public class AccountController implements IAccountController {
     @Override
     public void createAccount() {
         try {
-            String accountNumber = inputValidator.getAccountNumber ();
+            String accountNumber = inputValidator.getAccountNumber();
             double initialBalance = inputValidator.getInitialBalance();
             String username = inputValidator.getUsername();
             Account account = new Account(0, accountNumber, initialBalance, username, LocalDateTime.now());
